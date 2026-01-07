@@ -1,0 +1,22 @@
+:root { --bg:#0f172a; --card:#1e293b; --input:#334155; --text:#f8fafc; --muted:#94a3b8; }
+* { box-sizing:border-box; }
+body { margin:0; padding:16px; background:var(--bg); color:var(--text); font-family:system-ui; }
+.container { max-width:1100px; margin:0 auto; background:var(--card); border-radius:16px; padding:16px; }
+.header { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+.controls { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+.inline { display:flex; gap:8px; align-items:center; font-size:12px; color:var(--muted); }
+label { font-size:13px; color:var(--muted); display:block; margin-bottom:6px; }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px; }
+@media (max-width: 900px){ .grid{ grid-template-columns:1fr; } }
+textarea { width:100%; min-height:320px; background:var(--input); color:var(--text); border:1px solid #475569; border-radius:12px; padding:12px; outline:none; }
+button { border:0; border-radius:12px; padding:10px 12px; cursor:pointer; color:#fff; }
+.btn-primary { background:#3b82f6; }
+.btn-success { background:#10b981; width:100%; margin-top:10px; }
+.btn-secondary { background:#64748b; }
+.progress { height:8px; background:var(--input); border-radius:999px; overflow:hidden; margin-top:12px; }
+#progressBar { height:100%; width:0%; background:#60a5fa; transition:width .2s; }
+.row { display:flex; justify-content:space-between; gap:10px; margin-top:8px; flex-wrap:wrap; }
+.muted { color:var(--muted); font-size:12px; }
+.console { margin-top:12px; background:#0b1224; border-radius:12px; padding:10px; max-height:220px; overflow:auto; font-family:monospace; font-size:11px; }
+.console .err { color:#fca5a5; }
+.console .ok { color:#a7f3d0; }

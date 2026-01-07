@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MTProto Checker</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>MTProto Checker</h1>
+      <div class="controls">
+        <label class="inline">
+          <span>Client concurrency</span>
+          <input id="concurrency" type="number" min="1" max="100" value="10">
+        </label>
+        <label class="inline">
+          <span>Per-request timeout (ms)</span>
+          <input id="clientTimeout" type="number" min="1000" max="60000" value="12000">
+        </label>
+        <button id="btnConfig" class="btn-secondary" type="button">Config</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div>
+        <label>Input</label>
+        <textarea id="inputProxies" placeholder="One link per line..."></textarea>
+        <button id="startBtn" class="btn-primary" type="button">Start</button>
+      </div>
+      <div>
+        <label>Working</label>
+        <textarea id="outputProxies" readonly></textarea>
+        <button id="copyBtn" class="btn-success" type="button">Copy</button>
+      </div>
+    </div>
+
+    <div class="progress">
+      <div id="progressBar"></div>
+    </div>
+
+    <div class="row">
+      <div id="statusText" class="muted">Ready</div>
+      <div id="statsText" class="muted"></div>
+    </div>
+
+    <div id="console" class="console"></div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

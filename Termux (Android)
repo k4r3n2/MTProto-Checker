@@ -1,0 +1,10 @@
+pkg update && pkg upgrade -y
+pkg install -y nodejs git python make clang
+
+export GYP_DEFINES="android_ndk_path=''"  # only if native build fails
+git clone https://github.com/<YOUR_USERNAME>/MTProto-Checker.git
+cd MTProto-Checker
+npm install
+cp .env.example .env
+node server.js
+termux-open-url http://127.0.0.1:3000
